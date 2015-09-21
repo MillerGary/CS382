@@ -10,13 +10,13 @@ void setup() {
   //myBall = new Ball(width/2, 50, 10, 10, 255);
   //myBall2 = new Ball(width/4, 0, 25, 25, 50);
   
-  for (int i = 0; i < 500; i++) {
-    allBalls.add(new Ball(random(0, width), random(0, height), random(10, 25), random(10, 25), random(32, 255), random(32, 255), random(32, 255)));
+  for (int i = 0; i < 5000; i++) {
+    allBalls.add(new Ball(random(0, width), random(0, height), random(10, 75), random(10, 75), random(32, 255), random(32, 255), random(32, 255)));
   } //for
 } //setup
 
 void draw() {
-  //background(0);
+  background(0);
   //fill(255);
   
   for (int i = 0; i < 500; i++) {

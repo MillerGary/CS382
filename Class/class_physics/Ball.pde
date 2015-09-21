@@ -7,6 +7,7 @@ class Ball {
   float wid, hei; //value of width and height of ellipse used to draw ball
   float colR, colG, colB; //int to hold value of ball color
   float gravity; //float used to simulate gravity
+  int i; //value for rotation position
   
   Ball(float x, float y, float w, float h, float c1, float c2, float c3) {
     sx = x;
@@ -58,11 +59,17 @@ class Ball {
 
  vy *= airres;
  vx *= airres;
+ 
+ i+= 5;
   } //update
   
   void drawBall() {
     fill(colR, colG, colB);
-    ellipse(sx, sy, wid, hei);    
+    pushMatrix();
+    translate(sx, sy);
+    rotate(radians(i));
+    ellipse(0, 0, wid, hei);
+    popMatrix();    
   } //drawBall
   
 } //Ball (class)
