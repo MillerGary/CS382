@@ -61,13 +61,15 @@ class Matrix {
     for (int i = 0; i < r; i++) {
       for (int j = 0; j < c; j++) {
         //for (int k = 0; k < c; k++) {
-          C.values[i][j] += (A.values[i][j] * B.values[j][i]);
-          System.out.print(" " +C.values[i][j]); //debugging
+          C.values[i][j] += ((A.values[i][j] * B.values[j][i]) + );
+          System.out.println("A: " +A.values[i][j]);
+          System.out.println("B: " +B.values[i][j]); 
+          System.out.print("C: " +C.values[i][j]+ "\n\n"); //debugging
         //} //inside for
       } //middle for
       System.out.println();
     } //outside for
-    //System.out.println("We made it here");
+    System.out.println("We made it here");
     return C;
   } //multiplyMatrices 
 
