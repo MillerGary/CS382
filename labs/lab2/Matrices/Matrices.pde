@@ -22,10 +22,6 @@ class Matrix {
    } //outer for
  } //Matrix(float[][] values)
  
- Matrix (Matrix m1) { //copy constructor
-   this(m1.values);
- }
- 
  Matrix addMatrices(Matrix m1, Matrix m2, int rows, int columns) { //begin addMatrices A + B = C
  Matrix A = m1;
  Matrix B = m2;
@@ -60,16 +56,16 @@ class Matrix {
     Matrix C = new Matrix(rows, columns);
     for (int i = 0; i < r; i++) {
       for (int j = 0; j < c; j++) {
-        //for (int k = 0; k < c; k++) {
-          C.values[i][j] += ((A.values[i][j] * B.values[j][i]) + );
-          System.out.println("A: " +A.values[i][j]);
-          System.out.println("B: " +B.values[i][j]); 
-          System.out.print("C: " +C.values[i][j]+ "\n\n"); //debugging
-        //} //inside for
+        for (int k = 0; k < c; k++) {
+          C.values[i][j] = (C.values[i][j] + (A.values[i][k] * B.values[k][j]));
+          //System.out.println("A: " +A.values[i][j]);
+          //System.out.println("B: " +B.values[i][j]);
+          //System.out.print(" " +C.values[i][j]); //debugging
+        } //inside for
+        System.out.print(" " +C.values[i][j]); //debugging
       } //middle for
       System.out.println();
     } //outside for
-    System.out.println("We made it here");
     return C;
   } //multiplyMatrices 
 

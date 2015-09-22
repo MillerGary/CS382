@@ -9,18 +9,20 @@ float[][] zeros = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 void setup() {
   size(720, 480);
   background(0);
-  for (int i = 0; i < columns; i++) {
+  /*for (int i = 0; i < columns; i++) {
     for(int j = 0; j < rows; j++) {
       values[i][j] = values[i][j];
     } //inner for
-  } //outter for
+  } //outter for*/
   //m1 = new Matrix(rows, columns);
   //m2 = new Matrix(rows, columns);
   m3 = new Matrix(rows, columns);
   m1 = new Matrix(values);
   m2 = new Matrix(values1);
-  //m1.checkPrint(rows, columns);
-  //m2.checkPrint(rows, columns);
+  System.out.println("Matrix  A:"); 
+  m1.checkPrint(rows, columns);
+  System.out.println("Matrix B:");
+  m2.checkPrint(rows, columns);
   System.out.println("A + B = C");
   m3.addMatrices(m1, m2, rows, columns);
   //m3.checkPrint(rows, columns);
