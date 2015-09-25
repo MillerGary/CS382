@@ -5,14 +5,13 @@ float camX, camY, camZ; //variables for camera angle
 void setup() { //begin setup function
   size(800, 600, P3D); //initialize size of plane wit a 3d environment 
   
-  for (int i = 0; i < 1500; i++) { //begin for loop to create 75 diamond objetcs
+  for (int i = 0; i < 50; i++) { //begin for loop to create 75 diamond objetcs
     diamonds.add(new Diamond()); //adds new diamonds to ArrayList
   } //for
   
   camX = 0; //sets initial values for camera x position
   camY = 0; //sets intial value for camera y position
-  camZ = 2000; //sets initial value for camera z position
-  
+  camZ = -100; //sets initial value for camera z position
 } //setup
 
 
@@ -21,9 +20,9 @@ void draw() { //begin draw function
   background(0); //sets background to black 
   fill(0); //draws white objects on black background
   
-  for (int i = 0; i < 1500; i++) { //for loop that draws diamond objects
-    //diamonds.get(i).drawDiamond(); //draw diamond
-    shape(Diamond);
+  for (int i = 0; i < 50; i++) { //for loop that draws diamond objects
+    diamonds.get(i).drawDiamond(); //draw diamond
+    //shape(Diamond);
   } //for loop that draws diamond objects
     
   keyboardInput(); //checks for user input on the keyboard
@@ -35,16 +34,16 @@ void keyboardInput() {
   if (keyPressed && (key == CODED)) { //begin if logic check
     switch(keyCode) { //switch to check keyboard input
       case LEFT: //if user presses left key, update camX in left position
-        camX -= 10; //decrement value to move in the left position
+        camX -= 50; //decrement value to move in the left position
         break; 
       case RIGHT: //if user presses right key, update camX in right position
-        camX += 10; //incremental value to move in the right position
+        camX += 50; //incremental value to move in the right position
         break;
       case UP: //if user presses up key, update camZ in the (negative) up position
-        camZ -= 10; //decrement value to move camz in up position
+        camZ -= 50; //decrement value to move camz in up position
         break;
       case DOWN: //if user presses own key, update camZ in the (positive) down position
-        camZ += 10; //incremental value to move camZ in the down position
+        camZ += 50; //incremental value to move camZ in the down position
         break;
       default: //if user presses no keys, do nothing
         break;       

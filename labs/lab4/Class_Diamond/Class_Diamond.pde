@@ -13,10 +13,10 @@ PShape s;
 class Diamond { //begin Diamond class
 
   Diamond() {
-    x = random(-1000, 1000); //x vertex
-    y = random(-1000, 1000); //y vertex
-    z = random(-1000, 5000); //z vertex
-    len = random(0, 200); //length of diamond
+    x = width / 2; //x vertex
+    y = height / 2; //y vertex
+    z = 1500; //z vertex
+    len = 100; //length of diamond
     /*posX = random(-1000, 1000); //x coordinate
     posY = random(-1000, 1000); //y coordinate
     posZ = random(-500, 500); //z coordinate*/
@@ -32,7 +32,7 @@ class Diamond { //begin Diamond class
   pushMatrix();
   translate(random(-1500, 1500), random(-1500, 1500), random(-1500, 1500));
   //translate(posX, posY, posZ);
-  //rotate(PI/(random(2, 24)));
+  rotate(PI/(random(2, 24)));
   fill((int)random(200, 255), (int)random(200, 255), 0); //random diamond color
   
   /*s = createShape();
@@ -57,8 +57,7 @@ class Diamond { //begin Diamond class
       
     s.endShape();  //Top_Left face*/
   
-  
-  /*beginShape(); //Top-Left face
+  beginShape(); //Top-Left face
       vertex(x, y, z); //center
       vertex(vert2, y, z); //left point
       vertex(x, vert1, z); //top point
