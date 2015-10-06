@@ -16,7 +16,7 @@ class Diamond { //begin Diamond class
     x = random(0, 1000); //x vertex
     y = random(0, 1000); //y vertex
     z = random(-2000, 250); //z vertex
-    len = random(0, 50); //length of diamond
+    len = random(0, 25); //length of diamond
     /*posX = random(-1000, 1000); //x coordinate
     posY = random(-1000, 1000); //y coordinate
     posZ = random(-500, 500); //z coordinate*/
@@ -32,8 +32,8 @@ class Diamond { //begin Diamond class
   pushMatrix();
   translate(random(-1500, 1500), random(-1500, 1500), random(-1500, 1500));
   //translate(posX, posY, posZ);
-  rotate(PI/(random(2, 24)));
-  //fill((int)random(200, 255), (int)random(200, 255), 0); //random diamond color
+  //rotate(PI/(random(2, 24)));
+  //fill((int)random(100, 255), (int)random(100, 255), (int)random(100, 255)); //random diamond color
   fill(255, 255, 255);
     
   beginShape(); //Top-Left face

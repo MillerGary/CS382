@@ -3,7 +3,7 @@ ArrayList<Diamond> diamonds = new ArrayList<Diamond>(); //initialize a list of D
 float camX, camY, camZ; //variables for camera angle
 
 void setup() { //begin setup function
-  size(800, 600, P3D); //initialize size of plane wit a 3d environment
+  size(1000, 1000, P3D); //initialize size of plane wit a 3d environment
   frameRate(15); //sets framerate to 30 frames/second 
   
   for (int i = 0; i < 1500; i++) { //begin for loop to create 75 diamond objetcs
@@ -33,7 +33,7 @@ void draw() { //begin draw function
 
 //begin function that moves with keyboard input
 void keyboardInput() { 
-  if (keyPressed && (keyCode == CODED)) { //begin if logic check
+  if (keyPressed && (key == CODED)) { //begin if logic check
     switch(keyCode) { //switch to check keyboard input
       case LEFT: //if user presses left key, update camX in left position
         camX -= 150; //decrement value to move in the left position
@@ -56,17 +56,17 @@ void keyboardInput() {
 
 //begin funcion that changes lighting scheme on key press
 void changeLights() {
-  while (keyPressed == true) { //begin if logic check
+  if (keyPressed) { //begin if logic check
     switch(key) { //switch to check keyboard input
       case 'q': //if the user presses q, turn on ambient lights
         ambientLight(255, 0, 0);
         //System.out.println("We made it here"); //debugging
         break;
       case 'w': //if the user presses w, turn on dirdctional lights
-        directionalLight(255, 0, 0, 0, 1, 0);
+        directionalLight(255, 0, 0, 0, 0, 1);
         break;
-      case 'e': //if the user pressed e, turn on spot light
-        spotLight(51, 102, 126, 80, 20, 40, -1, 0, 0, PI/2, 2);
+      case 'e': //if the user pressed e, turn on point light
+        pointLight(0, 0, 255, width/2, 0, 0);
         break;
       default: //if the user presses no keys, do nothing
         break;
