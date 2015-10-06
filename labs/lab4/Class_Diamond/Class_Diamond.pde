@@ -13,10 +13,10 @@ PShape s;
 class Diamond { //begin Diamond class
 
   Diamond() {
-    x = width / 2; //x vertex
-    y = height / 2; //y vertex
-    z = 1500; //z vertex
-    len = 100; //length of diamond
+    x = random(0, 1000); //x vertex
+    y = random(0, 1000); //y vertex
+    z = random(-2000, 250); //z vertex
+    len = random(0, 50); //length of diamond
     /*posX = random(-1000, 1000); //x coordinate
     posY = random(-1000, 1000); //y coordinate
     posZ = random(-500, 500); //z coordinate*/
@@ -33,30 +33,9 @@ class Diamond { //begin Diamond class
   translate(random(-1500, 1500), random(-1500, 1500), random(-1500, 1500));
   //translate(posX, posY, posZ);
   rotate(PI/(random(2, 24)));
-  fill((int)random(200, 255), (int)random(200, 255), 0); //random diamond color
-  
-  /*s = createShape();
-  s.beginShape();
-  s.beginShape(); //Top-Left face
-      s.vertex(x, vert1, z); //top point
-      s.vertex(vert2, y, z); //left point
-      s.vertex(x, vert4, z); //bottom point
-      s.vertex(vert3, y, z); //right point
-      s.vertex(x, vert1, z); //top point
-      
-      s.vertex(x, y, vert6); //pos z
-      s.vertex(vert2, y, z); //left point
-      s.vertex(x, y, vert5); //neg z
-      s.vertex(vert3, y, z); //right point
-      s.vertex(x, y, vert6); //pos z
-      s.vertex(x, vert4, z); //bottom point
-      
-      s.vertex(x, y, vert5); //neg z
-      s.vertex(x, vert1, z); //top point
-      s.vertex(x, y, vert6); //pos z
-      
-    s.endShape();  //Top_Left face*/
-  
+  //fill((int)random(200, 255), (int)random(200, 255), 0); //random diamond color
+  fill(255, 255, 255);
+    
   beginShape(); //Top-Left face
       vertex(x, y, z); //center
       vertex(vert2, y, z); //left point
