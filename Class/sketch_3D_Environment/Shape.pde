@@ -10,9 +10,9 @@ class Shape {
     h = random(0, 100); //height
     w = random(0, 100); //width
     d = random(0, 100); //depgth
-    r = (int)random(0, 255); //red color value
-    g = (int)random(0, 255); //green color value
-    b = (int)random(0, 255); //blue color value
+    r = (int)random(0, 360); //red color value
+    g = (int)random(0, 100); //green color value
+    b = (int)random(0, 100); //blue color value
   } //Shape (constructor)
   
   //begin a method which draws shapes on visual plane

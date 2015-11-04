@@ -8,6 +8,8 @@ void setup() { //begin setup function
   size(800, 600, P3D); //intialize size with 3D environment
   noStroke(); //no stroke, looks better with lighting 
   
+  colorMode(HSB, 360, 100, 100);
+  
   for (int i = 0; i < 500; i++) { //begin for to intialize 50 shapes
     shapes.add(new Shape()); //adds new shapes to ArrayList
   } // for loop initalizes shapes
